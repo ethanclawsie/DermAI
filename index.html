@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DermAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+
+<body onload="">
+
+    <header>
+        <div class="logo">
+            <h1 class="fancy-text">DermAI</h1>
+            <img src="logo.png" alt="DermAI Logo" width="50" height="50" class="logo">
+        </div>
+        <div class="tab-container">
+            <ul class="tabs">
+                <li><a href="index.html">Upload Image</a></li>
+                <li><a href="findDermatologist/findDermatologist.html">Find a Dermatologist</a></li>
+                <li><a href="diseaseTypes/diseaseTypes.html">Supported Skin Diseases</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="top-container">
+        <div>
+            <input type="file" style="display:none" id="image-input">
+            <button id="upload-image" onclick="upload()" type="uploadFile">Upload Image</button>
+            <button id="predictButton" type="button">Predict conditions</button>
+        </div>
+
+
+        <br>
+    </div>
+
+    <!-- AI section to pull data from dataset.json for name, short paragraph, image, and link -->
+    <div class="container">
+        <div id="shortDescription">
+            <h1>What kind of death inducing disease do you have today? :)</h1>
+            <h2 id="name"></h2>
+            <p id="shortDescription"></p>
+            <img id="image" src="" />
+            <a id="link" href="">Link</a>
+
+        </div>
+    </div>
+
+    <script>
+        const predictButton = document.getElementById("predictButton");
+        const fileInput = document.getElementById("image-input");
+        const result = document.getElementById("shortDescription");
+  
+        predictButton.addEventListener("click", () => {
+          const file = fileInput.files[0];
+          const formData = new FormData();
+          formData.append("image", file);
+  
+          fetch("/predict", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              result.innerHTML = `Most predicted disease type: ${data.category}, Probability: ${data.probability}, Specific disease: ${data.disease}, Probability: ${data.disease_prob},
+              Second-most predicted disease type: ${data.category2}, Probability: ${data.c2_prob}, Specific disease: ${data.disease2}, Probability: ${data.d2_prob},`;
+            })
+            .catch((error) => {
+              console.error(error);
+              result.innerHTML = "An error occurred.";
+            });
+        });
+      </script>
+
+</body>
+
+</html>

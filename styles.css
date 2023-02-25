@@ -1,0 +1,351 @@
+body {
+    background: linear-gradient(to bottom, #00bfff, #ffffff);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.diseasesTypesBody{
+    background: linear-gradient(to bottom, #00bfff, #ffffff);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container {
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+/*white rounded corners*/
+.top-container {
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 200px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    display: flex;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+    color: white;
+}
+
+.heading {
+    color: black;
+}
+
+h2 {
+    display: flex;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Montserrat;
+    max-width: 15ch;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+span {
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    margin: 5px auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00bfff;
+    /* Set the background color to light blue */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 50, 67, 0.3);
+    /* Create an inside glow effect */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    /* Change the background color on hover for a subtle effect */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.7);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    /* Adjust the glow effect on hover */
+    color: #00bfff;
+}
+
+select {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    margin: 5px auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00bfff;
+    /* Set the background color to light blue */
+    border: none;
+    border-radius: 4px;
+    padding: 7px 10px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 50, 67, 0.3);
+    /* Create an inside glow effect */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+select:hover {
+    background-color: #ffffff;
+    /* Change the background color on hover for a subtle effect */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 191, 255, 0.7);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    /* Adjust the glow effect on hover */
+    color: #00bfff;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.search {
+    display: inline-block;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+}
+
+input {
+    color: black;
+}
+
+#radius {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding: 8px;
+    background-color: transparent;
+}
+
+#radius:focus {
+    outline: none;
+}
+
+#radius::placeholder {
+    color: #696969;
+}
+
+header {
+    /*background-color: #f1f1f1;*/
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin:10px;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* creating a disclosure button format*/
+summary[role=button] {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer
+}
+
+/* work on hover and focus to have different colors */
+summary[role=button]:hover,
+summary[role=button]:focus,
+summary::marker {
+    color: #ffffff
+}
+
+summary::marker::hover {
+    color: #004cff
+}
+
+details {
+    border: 1px solid #000;
+    margin-bottom: 0.25rem
+}
+
+details p {
+    margin: 0;
+}
+
+.tab-container {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    width:auto;
+}
+
+.tabs {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 5px;
+}
+
+.tabs li {
+    flex-grow: 1;
+
+}
+
+.tabs a {
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #696969;
+    transition: background 0.3s ease-in;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.tabs a:hover {
+    background: #006eff;
+    border-radius: 20px;
+    color: #000000;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+#upload-image {
+    background-color: #006eff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 20px;
+}
+
+#upload-image:hover {
+    background-color: #e8e8e8;
+    color: #00bfff;
+}
+
+#upload-image::before {
+    content: "\25B2";
+    font-size: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+#upload-image:hover::before {
+    content: "\25B2";
+    color: #00bfff;
+    margin-right: 5px;
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+.subheading3 {
+    color: black;
+    font-size: large;
+    background-color: rgb(228, 245, 255)
+}
+
+.paragraph3 {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-size: medium;
+}
+
+/* creating a disclosure button format*/
+summary[role=button] {
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer accentCol
+}
+
+/* work on hover and focus to have different colors */
+
+summary[role=button]:hover,
+summary::marker {
+    color: lightskyblue;
+    /* font-weight: 800; */
+}
+
+summary[role=button]:focus,
+summary::marker {
+    color: darkblue;
+    font-weight: 800;
+}
+
+details {
+    border: 1px solid #000;
+    margin-bottom: 0.25rem
+}
+
+details p {
+    margin: 0;
+}

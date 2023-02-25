@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find a Dermatologist</title>
+    <script src="findDermatologist.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="goToIndex()">
+            <h1 styles="color:white">DermAI</h1>
+            <img src="../logo.png" alt="DermAI Logo" width="50" height="50" class="logo">
+        </div>
+
+        <div class="tab-container">
+            <ul class="tabs">
+                <li><a href="../index.html">Upload Image</a></li>
+                <li><a href="findDermatologist.html">Find a Dermatologist</a></li>
+                <li><a href="../diseaseTypes/diseaseTypes.html">Supported Skin Diseases</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="heading">Find a Dermatologist</h1>
+        <div class="search"> <!--search bar-->
+            <input type="text" id="radius" placeholder="Radius">
+            <select name="units" id="units">
+                <option value="miles">Miles</option>
+                <option value="kilometers">Kilometers</option>
+            </select>
+            <button onclick="changeRadius()" class="button" style="margin-left: 10px">Search</button>
+        </div>
+        <!--<p id="demo">location</p>-->
+        <div id="map"></div>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA5RDpdew7bpNOC6G64xMOB6Pbk8xbuSU&callback=initMap&libraries=places"
+            async defer></script>
+    </div>
+</body>
+
+</html>
